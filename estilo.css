@@ -1,0 +1,67 @@
+.header {
+    background-color: #525863;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.btn-principal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+#btn-registrar {
+    background-color: #5BBC45;
+    border: 1px solid #5BBC45;
+    border-radius: 30px;
+    padding: 10px 20px 10px 20px;
+    font-size: 20px;
+    color: #525863;
+    cursor: pointer;
+}
+
+#btn-registrar:hover {
+    background-color: #525863;
+    color: white;
+    font-size: 17px;
+}
+
+.seccion-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+}
+
+#form-registro {
+    border: 2px solid #5BBC45;
+    border-radius: 20px;
+    padding: 30px;
+    font-size: 20px;
+}
+
+#btn-submit-form {
+    display: flex;
+    margin: auto;
+    background-color: #5BBC45;
+    border: 1px solid #5BBC45;
+    border-radius: 30px;
+    padding: 10px 20px 10px 20px;
+    font-size: 20px;
+    color: #525863;
+    cursor: pointer;
+}
+
+#btn-submit-form:hover {
+    background-color: #525863;
+    color: white;
+    font-size: 17px;
+}

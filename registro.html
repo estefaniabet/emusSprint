@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header class="header">
+    <h1>Registro</h1>
+    </header>
+    <section class="seccion-form">
+    <form id="form-registro" method="POST">
+        <label>Nombre</label><br>
+        <input id="nombre" type="text" size="50"/><br><br>
+        <label>Apellido</label><br>
+        <input id="apellido" type="text" size="50"/><br><br>
+        <label>Telefono</label><br>
+        <input id="telefono" type="tel" size="50"/><br><br>
+        <label>Correo</label><br>
+        <input id="correo" type="email" size="50"/><br><br>
+        <label>Contrasena</label><br>
+        <input id="contrasena" type="password" size="50"/><br><br>
+        <input type="submit" id="btn-submit-form" value="Registrar" onclick="checkNombre()">
+    </form>
+</section>
+<script src="form.js"></script>
+    
+</body>
+</html>
