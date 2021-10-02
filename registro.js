@@ -1,46 +1,49 @@
-var arreglo = [];
+let registros = [];
 
-//función array del formulario
-module.exports.agregarRegistro = function() {
-
-    function datos(nombre, apellido, telefono, correo, contrasena) {
-
-    this.nombre = nombre;
-    this.apellido = apellido;
-    this.telefono = telefono;
-    this.correo = correo;
-    this.contrasena = contrasena;
-    }
-
-    var a = document.getElementById("nombre").value;
-    var b = document.getElementById("apellido").value;
-    var c = document.getElementById("telefono").value;
-    var d = document.getElementById("correo").value;
-    var e = document.getElementById("contrasena").value;
-
-    dato = new datos(a,b,c,d,e);
-    arreglo.push(dato);
-    console.log(arreglo);
+function ordenarArreglo(arreglo) {
+    registros = arreglo;
+    let ordenar = registros.sort(function (a, b) {
+        var firstA = a.apellido.toUpperCase(); 
+        var firstB = b.apellido.toUpperCase(); 
+        if (firstA < firstB) {
+            return -1; 
+        }
+        if (firstA > firstB) {
+            return 1;
+        }
+        return 0;
+    });
+    return ordenar;
+    console.log(ordenar);
 }
     
+function filtrarCorreo(arreglo) {
 
-module.exports.ordenarArreglo = function (arreglo) {
-// function ordenarArreglo (arreglo) {
-    arreglo.sort( (a, b) => (a.apellido > b.apellido) ? 1 : -1);
-    console.log(arreglo);
-    return arreglo;
+    registros = arreglo;
+    let filtrar = registros.filter(v => v.correo.substring(v.correo.lastIndexOf("@") + 1) === "gmail.com");
+
+    return filtrar;
+    console.log(filtrar);
 }
 
-module.exports.filtrarCorreo = function(arreglo) {
+function agregarRegistro() {
+    var nombre = document.getElementById('nombre').value;
+    var apellido = document.getElementById('apellido').value;
+    var telefono = document.getElementById('telefono').value;
+    var correo = document.getElementById('correo').value;
+    var contrasena = document.getElementById('contrasena').value;
 
-// function filtrarCorreo(arreglo) {
-    var result = arreglo.filter(dato => dato.correo.includes('gmail.com'));
-    console.log(result);
-    return result;
+    var myData = {
+        nombre,
+        apellido,
+        telefono,
+        correo,
+        contrasena,
+    };
+    registros.push(myData);
+    console.log(agregarRegistro);
 }
-
-// function submitt() {
-//     agregarRegistro();
-//     ordenarArreglo(arreglo);
-//     filtrarCorreo(arreglo);
-// }
+module.exports.registros = registros;
+module.exports.filtrarCorreo = filtrarCorreo;
+module.exports.ordenarArreglo = ordenarArreglo;
+module.exports.agregarRegistro = agregarRegistro;
